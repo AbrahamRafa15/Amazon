@@ -30,12 +30,14 @@ app.post('/login', async (req, res) => {
   if (!email || !password) return res.status(400).json({ error: 'Email y contraseña requeridos' });
 
   try {
+    console.log('Datos recibidos:', req.body);
     const hashedPassword = await bcrypt.hash(password, 10);
     const nuevoUsuario = new User({ email, password: hashedPassword });
     await nuevoUsuario.save();
     res.json({ mensaje: 'Correo guardado correctamente' });
   } catch (err) {
-    res.status(500).json({ error: 'Error al guardar el correo' });
+    console.error('Error específico:', err);
+    res.status(500).json({ error: err.message });
   }
 });
 
