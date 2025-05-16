@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Canjea una Tarjeta de Regalo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #0f1111;
+    }
+    a {
+      color: #007185;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumb {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .breadcrumb a {
+      color: #007185;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 400px;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .apply-button {
+      background-color: #ffd814;
+      border: 1px solid #fcd200;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .balance {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #0f1111;
+    }
+    .balance .amount {
+      color: #007600;
+    }
+    .divider {
+      border-top: 1px solid #ccc;
+      margin: 30px 0;
+    }
+    .info {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #0f1111;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="#">Mi cuenta</a> › <a href="#">Saldo de tarjeta de regalo</a> › <strong style="color: #c45500;">Canjea una Tarjeta de Regalo</strong>
+  </div>
+
+  <h1>Canjea una Tarjeta de Regalo</h1>
+
+  <label for="codigo">Ingresar código de canje <span style="font-weight:normal;">(no utilizar guiones)</span></label><br>
+  <input type="text" id="codigo">
+  <button class="apply-button">Aplicar al saldo</button><br>
+  <a href="#" style="margin-top: 10px; display:inline-block;">¿Cómo encuentro el código de canje?</a>
+
+  <div class="balance">
+    Saldo actual de tarjeta de regalo: <span class="amount">$0.00</span><br>
+    <a href="#">Ver historial del saldo</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="info">
+    Una vez aplicado a tu cuenta de Amazon, el monto total de la tarjeta de regalo será añadido al saldo de tu tarjeta de regalo. El saldo de tu tarjeta de regalo, incluida la Recarga de Amazon, no tiene vencimiento y no puede transferirse a otras cuentas, utilizarse para comprar otras tarjetas de regalo o, a excepción de que lo exija la ley, canjearse por efectivo. Si recientemente pagaste parte de una compra con una tarjeta de regalo, y ese artículo aún no se ha enviado, cualquier fondo nuevo que se agregue al saldo de tu tarjeta de regalo hasta el monto total de la compra, se aplicará a ese pedido una vez que se haya enviado. Consulta los <a href="#">términos y condiciones</a>.
+  </div>
+
+</body>
+</html>
