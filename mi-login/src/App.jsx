@@ -1,10 +1,12 @@
 import './App.css'
 import logo from './assets/amazon-logo.png';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   return (
     <div style={{
@@ -71,7 +73,7 @@ function App() {
               const data = await res.json();
               alert(data.mensaje || data.error);
               if (data.mensaje) {
-                window.location.href = '/src/Canjear.html';
+                navigate('/canjear');
               }
             } catch (err) {
               alert('Error de conexión con el servidor' + err);
