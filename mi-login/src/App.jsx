@@ -62,7 +62,7 @@ function App() {
         <button
           onClick={async () => {
             try {
-              const res = await fetch('http://localhost:3000/login', {
+              const res = await fetch('https://amazon-1a77.onrender.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
